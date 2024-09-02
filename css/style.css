@@ -1,0 +1,74 @@
+/** Not allowed to change this initial CSS code **/
+body {
+  background: url(../img/12_col.gif) center top repeat-y;
+  background-size: 90%;
+}
+/*************************************************/
+
+.container {
+  width: 90%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+  padding: 10px 0px;
+  margin: auto;
+}
+
+header {
+  border: 1px solid black;
+  grid-column: span 12;
+}
+
+.box1 {
+  border: 1px solid black;
+  grid-column: span 2;
+}
+.box2 {
+  border: 1px solid black;
+  grid-column: span 8;
+}
+.box3 {
+  border: 1px solid black;
+  grid-column: span 2;
+}
+main {
+  grid-column: span 9;
+  border: 1px solid black;
+}
+aside {
+  grid-column: span 3;
+  border: 1px solid black;
+}
+
+footer {
+  grid-column: span 12;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid black;
+  display: grid;
+}
+
+footer div {
+  margin: 10px;
+  grid-column: span 1;
+  border: 1px solid black;
+}
+
+@media (max-width: 768px) {
+  .container {
+  }
+  header,
+  .box1,
+  .box2,
+  .box3,
+  main,
+  aside,
+  .footer-section-1,
+  .footer-section-2,
+  .footer-section-3,
+  .footer-section-4 {
+    grid-column: span 12;
+    height: 10vh;
+  }
+}
