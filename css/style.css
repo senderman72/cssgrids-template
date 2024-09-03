@@ -56,8 +56,6 @@ footer div {
 }
 
 @media (max-width: 768px) {
-  .container {
-  }
   header,
   .box1,
   .box2,
