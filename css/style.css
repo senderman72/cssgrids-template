@@ -55,6 +55,57 @@ footer div {
   border: 1px solid black;
 }
 
+@media (min-width: 960px) and (max-width: 1200px) {
+  .box1 {
+    grid-column: span 3;
+  }
+  .box2 {
+    grid-column: span 6;
+  }
+
+  .box3 {
+    grid-column: span 3;
+  }
+  main {
+    grid-column: span 8;
+  }
+  aside {
+    grid-column: span 4;
+  }
+}
+@media (min-width: 768px) and (max-width: 960px) {
+  .container {
+    grid-template-rows: repeat(5, 1fr);
+  }
+  .box1 {
+    grid-column: span 4;
+  }
+  .box2 {
+    grid-column: span 4;
+  }
+
+  .box3 {
+    grid-column: span 4;
+  }
+  main {
+    grid-column: span 6;
+  }
+  aside {
+    grid-column: span 6;
+  }
+  .footer-section-1,
+  .footer-section-2,
+  .footer-section-3,
+  .footer-section-4 {
+    grid-row: span 1;
+  }
+
+  footer {
+    grid-row: span 2;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   header,
   .box1,
