@@ -5,54 +5,99 @@ body {
 }
 /*************************************************/
 
+* {
+  box-sizing: border-box;
+}
+
 .container {
-  width: 90%;
+  width: 89%;
   height: 100vh;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(8, 1fr);
   gap: 10px;
   padding: 10px 0px;
   margin: auto;
 }
+header,
+.box1,
+.box2,
+.box3,
+main,
+aside,
+footer,
+.footer-section-1,
+.footer-section-2,
+.footer-section-3,
+.footer-section-4,
+main div {
+  border: 1px solid black;
+}
 
 header {
-  border: 1px solid black;
+  width: 100%;
   grid-column: span 12;
+  grid-row: span 1;
+  background-color: blanchedalmond;
+  place-content: center;
+  display: flex;
+  align-items: center;
+}
+header button {
+  margin: 0px 15px;
+}
+#button4 {
+  margin-left: auto;
 }
 
 .box1 {
-  border: 1px solid black;
+  grid-row: span 2;
   grid-column: span 2;
 }
 .box2 {
-  border: 1px solid black;
+  grid-row: span 2;
   grid-column: span 8;
 }
 .box3 {
-  border: 1px solid black;
+  grid-row: span 2;
   grid-column: span 2;
 }
 main {
+  grid-row: span 2;
   grid-column: span 9;
-  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+  justify-content: space-evenly;
+  background-color: blanchedalmond;
+}
+main div {
+  flex: 0 0 30%;
 }
 aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-row: span 2;
   grid-column: span 3;
-  border: 1px solid black;
+  background-color: blanchedalmond;
+}
+aside button {
+  margin-top: 4%;
+  width: 90%;
 }
 
 footer {
+  grid-row: span 2;
   grid-column: span 12;
   grid-template-columns: repeat(4, 1fr);
-  border: 1px solid black;
   display: grid;
 }
 
 footer div {
   margin: 10px;
   grid-column: span 1;
-  border: 1px solid black;
 }
 
 @media (min-width: 960px) and (max-width: 1200px) {
